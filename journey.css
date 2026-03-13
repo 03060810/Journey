@@ -86,7 +86,7 @@ body {
 	display: none !important;
 }
 .text{
-	margin: 3vh;
+	margin-bottom: 5vh;
 }
 .meaning {
     text-align: justify;
@@ -111,4 +111,5 @@ body {
 	height: auto; /* Giữ tỷ lệ gốc của hình */
 	object-fit: contain; /* Đảm bảo toàn bộ hình ảnh hiển thị đầy đủ */
 }
+
 
