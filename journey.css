@@ -40,24 +40,36 @@ body {
 	top: 5vh;
 	scroll-snap-type: y mandatory;
 }		
-.cardbox {
+/*.cardbox {
 	border-color: rgb(240, 240, 240);
 	border-style: double;
 	margin: 0 auto 5vh auto;
 	border-radius: 5vh;
-	height: 90vh;
-	/*width: 55vh;
-	max-width: 95vw;*/
+	max-height: 90vh;
+	max-width: 90vw;
 	aspect-ratio: 7 / 12;
 	overflow: hidden;
 	scroll-snap-align: start;
+}*/
+.cardbox {
+  /* chiều cao tối đa 95vh */
+  height: min(90vh, 90vh);
+  /* width = height * 7/12, nhưng không vượt quá 95vw */
+  width: min(calc(90vh * 7 / 12), 90vw);
+
+  border: double 5px rgb(240,240,240);
+  border-radius: 5vh;
+  margin: 0 auto 5vh auto;
+  overflow: hidden;
+  scroll-snap-align: start;
 }
+
 .front {
-  background-repeat: no-repeat;   /* không lặp lại */
-  background-position: center center; /* căn giữa cả ngang và dọc */
-  background-size: cover;         /* ảnh phủ toàn bộ khung, giữ tỉ lệ */
-  width: 100%;
-  height: 100%;
+	background-repeat: no-repeat;   /* không lặp lại */
+	background-position: center center; /* căn giữa cả ngang và dọc */
+	background-size: cover;         /* ảnh phủ toàn bộ khung, giữ tỉ lệ */
+	width: 100%;
+	height: 100%;
 }
 
 .back {
