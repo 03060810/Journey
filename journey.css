@@ -1,0 +1,102 @@
+body {
+	display: flex;
+	justify-content: center; /* Căn giữa theo chiều ngang */
+	margin: 0; /* Loại bỏ khoảng cách mặc định */
+	padding: 0;
+	font-family: Calibri;
+	text-align: center;
+}
+.container{
+	display: block;
+	width: 100vw;
+	height: 100vh;
+}
+.header{
+	display: flex;
+	width: 100vw;
+	height: 5vh;
+	line-height: 3vh;
+	top: 0;
+	z-index: 1000;
+}
+.headerinput{
+	width: 30vw;
+	height: 3vh;
+	border-color: rgb(246, 246, 246);
+	border-style: double;
+	display: inline-block;
+	text-align: center;
+	margin: 1vh 0.5vw 1vh 0.5vw;
+	font-size: 2vh;
+}
+.result {
+	font-family: consolas;
+	display: block;
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	height: 95vh;
+	overflow: scroll;
+	top: 5vh;
+	scroll-snap-type: y mandatory;
+}		
+.cardbox {
+	border-color: rgb(240, 240, 240);
+	border-style: double;
+	margin: 0 auto 5vh auto;
+	border-radius: 5vh;
+	height: 90vh;
+	/*width: 55vh;
+	max-width: 95vw;*/
+	aspect-ratio: 7 / 12;
+	overflow: hidden;
+	scroll-snap-align: start;
+}
+.front {
+  background-repeat: no-repeat;   /* không lặp lại */
+  background-position: center center; /* căn giữa cả ngang và dọc */
+  background-size: cover;         /* ảnh phủ toàn bộ khung, giữ tỉ lệ */
+  width: 100%;
+  height: 100%;
+}
+
+.back {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    height: 80vh;
+    margin: 5vw 5vh;
+	border-color: rgb(240, 240, 240);
+	border-radius: 5vh;
+}
+.hidden {
+	display: none !important;
+}
+.text{
+	margin: 3vh;
+}
+.meaning {
+    text-align: justify;
+    margin-top: 5vh;
+}
+.cardname{
+	display: block;
+	text-transform: uppercase;
+	font-weight: bold;
+	line-height: 5vh;
+	font-size: 3vh;
+}
+.side{
+	display: block;
+	font-weight: bold;
+}
+.reversed .front{
+	transform: rotate(180deg)!important;
+}
+.small-img {
+	width: 100%; /* Chiều rộng tự động khớp với card box */
+	height: auto; /* Giữ tỷ lệ gốc của hình */
+	object-fit: contain; /* Đảm bảo toàn bộ hình ảnh hiển thị đầy đủ */
+}
+
